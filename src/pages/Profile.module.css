@@ -1,0 +1,126 @@
+* {
+
+    box-sizing: border-box;
+}
+
+.onSubmit {
+    width: 80%;
+
+    flex-direction: column;
+
+    display: flex;
+    justify-content: center;
+    height: auto;
+    align-items: flex-end;
+
+
+}
+
+
+
+.container {
+
+    display: flex;
+    flex-direction: row;
+    background-color: magenta;
+    width: 800px;
+    height: 400px;
+
+
+}
+
+
+.leftColumn {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    /*justify-content: space-between;*/
+    background-color: #d1ce00;
+    color: white;
+    padding: 20px;
+}
+
+.profile{
+
+    color: #282c34;
+
+}
+
+
+
+.centerColumn {
+    display: flex;
+    flex-direction: column;
+    background-color: lightsalmon;
+    width: 700px;
+    /*height: 200px;*/
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+button1 {
+    background-color: magenta;
+}
+
+.rightColumn {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+
+    justify-content: space-between;
+    background-color: darkturquoise;
+    color: white;
+    padding: 20px;
+}
+
+
+.button2 {
+    background-color: #ff1e00;
+}
+
+
+.image {
+    /*    dis*/
+    display: flex;
+    width: 150px;
+    height: 150px;
+
+    border: 3px solid black;
+    border-radius: 30%;
+}
+
+.button1 {
+    flex-direction: column;
+    align-content: flex-start;
+    background-color: magenta;
+}
+
+
+.onSubmit{
+    /*color: rgba(0, 0, 0, 0);*/
+    display: flex;
+    flex-direction: column;
+
+    /*background-color: lightsalmon;*/
+    width: 150px;
+    height: 100px;
+    /*align-content: space-evenly;*/
+    /*align-items: stretch;*/
+    justify-content: space-evenly;
+
+
+}
+
+.warning{
+    background-color: white;
+
+    color: red;
+
+
+}
