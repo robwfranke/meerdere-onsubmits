@@ -8,10 +8,9 @@ function Profile() {
 
     // const {register, handleSubmit, formState: {errors}} = useForm();
     // const {register2, handleSubmit2, formState: {errors2}} = useForm();
-    const { register, errors, handleSubmit } = useForm({
+    const {register, errors, handleSubmit} = useForm({
         mode: "onBlur"
     });
-
 
 
     const {
@@ -41,26 +40,27 @@ function Profile() {
 
     function onSubmit1(data) {
 
-        console.log("IN onSubmit1",data)
+        console.log("IN onSubmit1", data)
 
     }
 
 
     function onSubmit2(data) {
 
-        console.log("IN onSubmit2",data)
+        console.log("IN onSubmit2", data)
 
     }
 
     return (
-
-
         <>
+<div className={styles["containerLeftRight"]}>
+            <div>
 
-            <form key={1} onSubmit={handleSubmit(onSubmit1)}>
-                <h1>onSubmit 1</h1>
+                <form key={1} onSubmit={handleSubmit(onSubmit1)}>
 
-                <div>
+                <fieldset className={styles["containerLeft"]}>
+
+                    <h3>onSubmit 1</h3>
                     <label htmlFor="city-field">
                         Stad:
                         <input
@@ -71,9 +71,6 @@ function Profile() {
 
                     </label>
 
-                </div>
-
-                <div>
                     <label htmlFor="street-field">
                         Straatnaam en nummer:
                         <input
@@ -84,58 +81,67 @@ function Profile() {
 
                     </label>
 
-                </div>
+
+                    <button
+                        type="submit"
+                        className={styles["submit-button"]}
+                    >
+                        Vastleggen
+                    </button>
+
+
+
+
+
+                </fieldset>
+
+                </form>
+            </div>
+
+
+
+    <div>
+        <form key={2} onSubmit={handleSubmit2(onSubmit2)}>
+
+            <fieldset className={styles["containerLeft"]}>
+
+                <h3>onSubmit 2</h3>
+                <label htmlFor="city-field">
+                    Stad:
+                    <input
+                        defaultValue=""
+                        type="text"
+                        {...register("city",)}
+                    />
+
+                </label>
+
+                <label htmlFor="street-field">
+                    Straatnaam en nummer:
+                    <input
+                        defaultValue=""
+                        type="text"
+                        {...register("street",)}
+                    />
+
+                </label>
+
 
                 <button
                     type="submit"
                     className={styles["submit-button"]}
                 >
-                    Inloggen
+                    Vastleggen
                 </button>
 
-            </form>
 
 
 
 
+            </fieldset>
 
-
-            <form key={2} onSubmit={handleSubmit2(onSubmit2)}>
-                <h1>onSubmit 2</h1>
-
-                <div>
-                    <label htmlFor="city-field">
-                        Stad:
-                        <input defaultValue=""
-                            type="text"
-                            {...register2("city2",)}
-                        />
-
-                    </label>
-
-                </div>
-
-                <div>
-                    <label htmlFor="street-field">
-                        Straatnaam en nummer:
-                        <input
-                            defaultValue=""
-                            type="text"
-                            {...register2("street2",)}
-                        />
-
-                    </label>
-
-                </div>
-
-                <button
-                    type="submit"
-                    className={styles["submit-button"]}
-                >
-                    Inloggen
-                </button>
-
-            </form>
+        </form>
+    </div>
 
 
 
@@ -143,14 +149,9 @@ function Profile() {
 
 
 
-
-
-
-
+</div>
         </>
-
     )
-
 }
 
 export default Profile;
