@@ -53,103 +53,91 @@ function Profile() {
 
     return (
         <>
-<div className={styles["containerLeftRight"]}>
-            <div>
+            <div className={styles["containerLeftRight"]}>
+                <div>
 
-                <form key={1} onSubmit={handleSubmit(onSubmit1)}>
+                    <form key={1} onSubmit={handleSubmit(onSubmit1)}>
 
-                <fieldset className={styles["containerLeft"]}>
+                        <fieldset className={styles["containerLeft"]}>
 
-                    <h3>onSubmit 1</h3>
-                    <label htmlFor="city-field">
-                        Stad:
-                        <input
-                            defaultValue=""
-                            type="text"
-                            {...register("city",)}
-                        />
+                            <h3>onSubmit 1</h3>
+                            <label htmlFor="city-field">
+                                Stad:
+                                <input
+                                    defaultValue=""
+                                    type="text"
+                                    {...register("city")}
+                                />
 
-                    </label>
+                            </label>
 
-                    <label htmlFor="street-field">
-                        Straatnaam en nummer:
-                        <input
-                            defaultValue=""
-                            type="text"
-                            {...register("street",)}
-                        />
+                            <label htmlFor="street-field">
+                                Straatnaam en nummer:
+                                <input
+                                    defaultValue=""
+                                    type="text"
+                                    {...register("street",)}
+                                />
 
-                    </label>
-
-
-                    <button
-                        type="submit"
-                        className={styles["submit-button"]}
-                    >
-                        Vastleggen
-                    </button>
+                            </label>
 
 
+                            <button
+                                type="submit"
+                                className={styles["submit-button"]}
+                            >
+                                Vastleggen
+                            </button>
 
 
+                        </fieldset>
 
-                </fieldset>
+                    </form>
+                </div>
 
-                </form>
+
+                <div>
+                    <form key={2} onSubmit={handleSubmit2(onSubmit2)}>
+
+                        <fieldset className={styles["containerLeft"]}>
+
+                            <h3>onSubmit 2</h3>
+                            <label htmlFor="city-field">
+                                Stad:
+                                <input
+                                    defaultValue=""
+                                    type="text"
+                                    {...register2("city",)}
+                                />
+
+                            </label>
+
+                            <label htmlFor="street-field">
+                                Straatnaam en nummer:
+                                <input
+                                    defaultValue=""
+                                    type="text"
+                                    {...register2("street",)}
+                                />
+
+                            </label>
+
+
+                            <button
+                                type="submit"
+                                className={styles["submit-button"]}
+                            >
+                                Vastleggen
+                            </button>
+
+
+                        </fieldset>
+
+                    </form>
+                </div>
+
+
             </div>
-
-
-
-    <div>
-        <form key={2} onSubmit={handleSubmit2(onSubmit2)}>
-
-            <fieldset className={styles["containerLeft"]}>
-
-                <h3>onSubmit 2</h3>
-                <label htmlFor="city-field">
-                    Stad:
-                    <input
-                        defaultValue=""
-                        type="text"
-                        {...register("city",)}
-                    />
-
-                </label>
-
-                <label htmlFor="street-field">
-                    Straatnaam en nummer:
-                    <input
-                        defaultValue=""
-                        type="text"
-                        {...register("street",)}
-                    />
-
-                </label>
-
-
-                <button
-                    type="submit"
-                    className={styles["submit-button"]}
-                >
-                    Vastleggen
-                </button>
-
-
-
-
-
-            </fieldset>
-
-        </form>
-    </div>
-
-
-
-
-
-
-
-</div>
         </>
     )
 }
