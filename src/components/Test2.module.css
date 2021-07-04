@@ -1,0 +1,31 @@
+
+
+.containerLeftRight{
+    display: flex;
+    width: 1000px;
+    box-sizing: border-box;
+    flex-direction: row;
+
+}
+
+
+
+
+
+
+
+
+
+.containerLeft {
+    display: flex;
+    width: 500px;
+    box-sizing: border-box;
+    flex-direction: column;
+    color: black;
+    background-color: coral;
+
+    justify-content: center;
+    height: auto;
+    align-items: flex-end;
+    margin-left: 150px;
+}

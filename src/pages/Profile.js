@@ -2,24 +2,12 @@ import React, {useState, useContext, useEffect} from 'react';
 import {useForm} from 'react-hook-form';
 import {Link, useHistory} from 'react-router-dom';
 import styles from "./Profile.module.css"
+import Test1 from "../components/Test1";
+import Test2 from "../components/Test2";
 
 
 function Profile() {
 
-    // const {register, handleSubmit, formState: {errors}} = useForm();
-    // const {register2, handleSubmit2, formState: {errors2}} = useForm();
-    const {register, errors, handleSubmit} = useForm({
-        mode: "onBlur"
-    });
-
-
-    const {
-        register: register2,
-        errors: errors2,
-        handleSubmit: handleSubmit2
-    } = useForm({
-        mode: "onBlur"
-    });
 
     const [errorSaveFile, setErrorSaveFile] = useState(false);
     const [errorDeleteFile, setErrorDeleteFile] = useState(false);
@@ -45,97 +33,22 @@ function Profile() {
     }
 
 
-    function onSubmit2(data) {
 
-        console.log("IN onSubmit2", data)
-
-    }
 
     return (
         <>
             <div className={styles["containerLeftRight"]}>
+
+
+
                 <div>
-
-                    <form key={1} onSubmit={handleSubmit(onSubmit1)}>
-
-                        <fieldset className={styles["containerLeft"]}>
-
-                            <h3>onSubmit 1</h3>
-                            <label htmlFor="city-field">
-                                Stad:
-                                <input
-                                    defaultValue=""
-                                    type="text"
-                                    {...register("city")}
-                                />
-
-                            </label>
-
-                            <label htmlFor="street-field">
-                                Straatnaam en nummer:
-                                <input
-                                    defaultValue=""
-                                    type="text"
-                                    {...register("street",)}
-                                />
-
-                            </label>
-
-
-                            <button
-                                type="submit"
-                                className={styles["submit-button"]}
-                            >
-                                Vastleggen
-                            </button>
-
-
-                        </fieldset>
-
-                    </form>
+                    <Test1/>
                 </div>
 
 
                 <div>
-                    <form key={2} onSubmit={handleSubmit2(onSubmit2)}>
-
-                        <fieldset className={styles["containerLeft"]}>
-
-                            <h3>onSubmit 2</h3>
-                            <label htmlFor="city-field">
-                                Stad:
-                                <input
-                                    defaultValue=""
-                                    type="text"
-                                    {...register2("city",)}
-                                />
-
-                            </label>
-
-                            <label htmlFor="street-field">
-                                Straatnaam en nummer:
-                                <input
-                                    defaultValue=""
-                                    type="text"
-                                    {...register2("street",)}
-                                />
-
-                            </label>
-
-
-                            <button
-                                type="submit"
-                                className={styles["submit-button"]}
-                            >
-                                Vastleggen
-                            </button>
-
-
-                        </fieldset>
-
-                    </form>
+                    <Test2/>
                 </div>
-
 
             </div>
         </>
